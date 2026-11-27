@@ -1,4 +1,4 @@
-services:
+sservices:
   db_mysql:
     image: mysql:8.0
     container_name: db_mysql
