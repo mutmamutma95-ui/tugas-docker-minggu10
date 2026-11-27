@@ -36,3 +36,4 @@ networks:
   wp_network:
     driver: bridge
 
+
