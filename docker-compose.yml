@@ -4,10 +4,10 @@ services:
     container_name: db_mysql
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: ${rootpass123}
-      MYSQL_DATABASE: ${wordpress_kelompok06}
-      MYSQL_USER: ${wp_kelompok06}
-      MYSQL_PASSWORD: ${wp_kelompok06123}
+      MYSQL_ROOT_PASSWORD:rootpass123
+      MYSQL_DATABASE: wordpress_kelompok06
+      MYSQL_USER: wp_kelompok06
+      MYSQL_PASSWORD: wp_kelompok06123
     volumes:
       - wp_data:/var/lib/mysql
     networks:
@@ -22,10 +22,10 @@ services:
     ports:
       - "8000:80"
     environment:
-      WORDPRESS_DB_HOST: ${db_mysql:3306}
-      WORDPRESS_DB_NAME: ${wordpress_kelompok06}
-      WORDPRESS_DB_USER: ${wp_kelompok06}
-      WORDPRESS_DB_PASSWORD: ${wp_kelompok06123}
+      WORDPRESS_DB_HOST: db_mysql:3306
+      WORDPRESS_DB_NAME: wordpress_kelompok06
+      WORDPRESS_DB_USER: wp_kelompok06
+      WORDPRESS_DB_PASSWORD: wp_kelompok06123
     networks:
       - wp_network
 
