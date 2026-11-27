@@ -1,0 +1,17 @@
+name: Compose Check
+
+on:
+  push:
+    branches: [____]
+  ____:
+
+jobs:
+  ____:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Siapkan .env dari contoh
+        run: ____
+      - name: Validasi file compose
+        run: ____
+
