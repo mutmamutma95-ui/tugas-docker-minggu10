@@ -10,9 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-
       - name: Siapkan .env dari contoh
         run: cp .env.example .env
-
       - name: Validasi file compose
         run: docker compose config -q
